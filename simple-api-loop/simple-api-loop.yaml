@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-api-loop
+  namespace: simple-api-loop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-api-loop
+  template:
+    metadata:
+      labels:
+        app: simple-api-loop
+    spec:
+      containers:
+      - name: simple-api-loop
+        image: simple-api-loop:latest
+        ports:
+        - containerPort: 80
