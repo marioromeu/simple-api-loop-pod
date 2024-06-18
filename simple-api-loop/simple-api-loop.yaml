@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-api-loop
-  namespace: simple-api-loop
+  name: simple-api-loop-deployment
+  namespace: test
 spec:
   replicas: 1
   selector:
