@@ -18,3 +18,11 @@ spec:
         image: marioromeu/java-image-simple-api-loop:latest
         ports:
         - containerPort: 9090
+        resources:
+          limits:
+            memory: 512Mi
+            cpu: 1
+          requests:
+            memory: 256Mi
+            cpu: 1
+          
