@@ -34,3 +34,8 @@ autoscaling:
   target:
     cpuUtilization: 25
     memoryAverageValue: 300Mi
+
+status:
+  availableReplicas: 2
+  readyReplicas: 2
+  replicas: 2
