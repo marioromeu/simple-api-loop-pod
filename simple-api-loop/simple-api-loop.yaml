@@ -18,24 +18,3 @@ spec:
         image: marioromeu/java-image-simple-api-loop:latest
         ports:
         - containerPort: 9090
-
-resources:
-  requests:
-    cpu: 100m
-    memopry: 128Mi
-  limits:
-    cpu: 500m
-    memory: 700Mi
-    
-autoscaling:
-  enable: true
-  minReplicas: 2
-  maxReplicas: 5
-  target:
-    cpuUtilization: 25
-    memoryAverageValue: 300Mi
-
-status:
-  availableReplicas: 2
-  readyReplicas: 2
-  replicas: 2
