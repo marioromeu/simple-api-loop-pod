@@ -8,6 +8,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: simple-api-loop-deployment
+    namespace: test
   minReplicas: 2
   maxReplicas: 5
   metrics:
