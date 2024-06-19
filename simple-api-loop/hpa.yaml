@@ -1,6 +1,15 @@
-type: Resource
-resource:
-  name: cpu
+resources:
+  requests:
+    cpu: 100m
+    memopry: 128Mi
+  limits:
+    cpu: 500m
+    memory: 700Mi
+    
+autoscaling:
+  enable: true
+  minReplicas: 2
+  maxReplicas: 5
   target:
-    type: Utilization
-    averageUtilization: 50
+    cpuUtilization: 50
+    memoryAverageValue: 600Mi
