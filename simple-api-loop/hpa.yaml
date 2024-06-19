@@ -1,13 +1,12 @@
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: simple-api-loop-hpa  
+  name: simple-api-loop-hpa
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
     name: simple-api-loop-deployment
-    namespace: test
   minReplicas: 2
   maxReplicas: 5
   metrics:
