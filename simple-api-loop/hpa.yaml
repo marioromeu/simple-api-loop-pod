@@ -9,11 +9,11 @@ spec:
     kind: Deployment
     name: simple-api-loop-deployment
   minReplicas: 1
-  maxReplicas: 8
+  maxReplicas: 10
   metrics:
   - type: Resource
     resource:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 70
+        averageUtilization: 90
