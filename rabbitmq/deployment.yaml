@@ -11,7 +11,7 @@ spec:
       image: rabbitmq:management
       resources:
         requests:
-          memory: "1Gi"
+          memory: "512Mi"
         limits:
           memory: "256Mi"
       ports:
