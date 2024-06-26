@@ -3,12 +3,26 @@ kind: Pod
 metadata:
   name: rabbitmq3-0
   namespace: default
+  labels:
+    app: rabbitmq3
 spec:
   containers:
-  - name: rabbitmq3
-    image: bitnami/rabbitmq:latest
-    resources:
-      requests:
-        memory: "1Gi"
-      limits:
-        memory: "256Mi"
+    - name: rabbitmq3
+      image: rabbitmq:management
+      resources:
+        requests:
+          memory: "1Gi"
+        limits:
+          memory: "256Mi"
+      ports:
+        - containerPort: 5672
+          name: amqp
+        - containerPort: 15672
+          name: http
+      env:
+        - name: RABBITMQ_DEFAULT_VHOST
+          value: storage-collector-dev
+        - name: RABBITMQ_DEFAULT_USER
+          value: guest
+        - name: RABBITMQ_DEFAULT_PASS
+          value: guest
