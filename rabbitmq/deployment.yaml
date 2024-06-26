@@ -10,10 +10,10 @@ spec:
     - name: rabbitmq3
       image: rabbitmq:management
       resources:
-        requests:
-          memory: "512Mi"
         limits:
-          memory: "256Mi"
+          memory: "1Gi"
+        requests:
+          memory: "512Mi"        
       ports:
         - containerPort: 5672
           name: amqp
