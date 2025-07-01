@@ -4,19 +4,13 @@ metadata:
   name: simple-api-loop-service
   namespace: test
   labels:
-    app: simple-api-loop  
+    app: simple-api-loop
 spec:
   selector:
-    app: simple-api-loop  
-  ports:
-  - name: http
-    port: 9090
-    targetPort: 9090
-    nodePort: 39090
+    app: simple-api-loop
   type: NodePort
   ports:
     - protocol: TCP
       port: 9090
       targetPort: 9090
       nodePort: 30090
-  type: ClusterIP
