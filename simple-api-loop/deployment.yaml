@@ -4,6 +4,7 @@ metadata:
   name: simple-api-loop-deployment
   namespace: test
 spec:
+  project: default
   replicas: 1
   selector:
     matchLabels:
